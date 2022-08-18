@@ -7,15 +7,11 @@ plugins {
 val taboolibVersion = "6.0.9-63"
 repositories {
     mavenCentral()
-    maven("https://repo.tabooproject.org/repository/releases")
 }
 
 dependencies {
     compileOnly(kotlin("stdlib"))
     compileOnly(fileTree("libs"))
-
-    compileOnly("io.izzel:taboolib:${taboolibVersion}:common")
-    compileOnly("io.izzel:taboolib:${taboolibVersion}:platform-bukkit")
 }
 
 tasks.withType<JavaCompile> {
